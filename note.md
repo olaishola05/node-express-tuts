@@ -9,7 +9,6 @@ It desc the type of resp sent to the browser.
 
 
 ## Range of Response Codes
-
 - 100 Range: Info responses for the browser
 - 200 Range: success codes
 - 300 Range:  for redirects
