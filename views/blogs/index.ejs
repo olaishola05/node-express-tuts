@@ -1,0 +1,39 @@
+<html lang="en">
+
+<%- include('../partials/head.ejs') %>
+
+    <body>
+
+        <%- include('../partials/nav.ejs') %>
+
+            <div class="blogs content">
+                <h2>All blogs</h2>
+
+                <% if (blogs.length> 0) { %> <% blogs.forEach(blog=>
+                        { %>
+                        <a class="single" href="/blogs/<%= blog._id %>">
+                            <h3 class="title">
+                                <%= blog.title %>
+                            </h3>
+                            <p class="snippet">
+                                <%= blog.snippet %>
+                                    <br>
+                                    <span>
+                                        Created on <%= blog.createdAt.toDateString() %>
+                                    </span>
+                            </p>
+
+                        </a>
+
+
+
+                        <% }) %>
+                            <% } else { %>
+                                <p>Theres is no blogs to display</p>
+                                <% } %>
+            </div>
+
+            <%- include('../partials/foot.ejs') %>
+    </body>
+
+</html>
